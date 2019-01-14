@@ -4,12 +4,9 @@
   "description": "Configuration and scripts for Mutual 8 apps and libraries.",
   "homepage": "https://github.com/mutual8/m8-toolbox/tree/master/packages/m8-scripts#readme",
   "license": "AGPL-3.0-or-later",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "dist/index.js",
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
