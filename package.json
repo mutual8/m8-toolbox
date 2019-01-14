@@ -1,0 +1,8 @@
+{
+  "name": "@mutual8/m8-toolbox-monorepo",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.10.5"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@mutual8/m8-scripts",
+  "version": "0.0.0-semantically-released",
+  "description": "Configuration and scripts for Mutual 8 apps and libraries.",
+  "homepage": "https://github.com/mutual8/m8-toolbox/tree/master/packages/m8-scripts#readme",
+  "license": "AGPL-3.0-or-later",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mutual8/m8-toolbox.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/mutual8/m8-toolbox/issues"
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {}
+}

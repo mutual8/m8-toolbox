@@ -1,0 +1,13 @@
+/node_modules
+/packages/*/node_modules
+package-lock.json
+/packages/*/package-lock.json
+/.tmp/
+/packages/*/.tmp/
+/packages/*/LICENSE
+.vscode/
+.idea/
+*.log
+*.cache
+.nyc_output
+coverage
