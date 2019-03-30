@@ -1,0 +1,6 @@
+/.tmp
+/node_modules
+/packages/*/.tmp
+/packages/*/build
+/packages/*/dist
+/packages/*/node_modules
