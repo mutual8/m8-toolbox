@@ -1,15 +1,24 @@
-/node_modules
-
-/packages/*/node_modules
-/packages/*/.tmp/
-/packages/*/package-lock.json
+# Ignore LICENSE files in package folders.
 /packages/*/LICENSE
 
+# Ignore build files in package folders.
+/packages/*/build
+/packages/*/dist
+
+# Files created by npm. 
+package-lock.json
+/node_modules
+/packages/*/package-lock.json
+/packages/*/node_modules
+
+# IDE / editor specific files.
 .idea/
-.tmp/
 .vscode/
+
+# Temporary files.
+.tmp/
+/packages/*/.tmp/
 *.log
 *.cache
 coverage
-package-lock.json
 .nyc_output
