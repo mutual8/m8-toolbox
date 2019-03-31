@@ -127,38 +127,3 @@ export const debug: LogFunction = (message, context): void => {
   console.debug(message)
   logContext(console.debug, context)
 }
-
-const loggers = {
-  emergency,
-  alert,
-  critical,
-  error,
-  warning,
-  notice,
-  info,
-  debug,
-}
-
-/**
- * Logs with an arbitrary level.
- *
- * @param level
- * @param message
- * @param context
- *
- * @return void
- */
-const createLogger = (
-  level: string,
-  message: string,
-  context?: Context
-): void => {
-  try {
-    loggers[level](message, context)
-  } catch (_) {
-    console.log(`[${level.toString().toLowerCase()}]`, message)
-    logContext(console.info, context)
-  }
-}
-
-export default createLogger
