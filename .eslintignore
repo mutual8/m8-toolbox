@@ -1,6 +1,11 @@
 /.tmp
 /node_modules
+
+*.d.ts
 /packages/*/.tmp
-/packages/*/build
-/packages/*/dist
+/packages/*/lib
 /packages/*/node_modules
+/packages/*/babel.config.js
+/packages/*/jest.config.js
+
+/packages/server-cli/bin/mutual8-server

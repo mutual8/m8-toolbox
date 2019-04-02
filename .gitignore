@@ -4,12 +4,14 @@
 # Ignore build files in package folders.
 /packages/*/build
 /packages/*/dist
+/packages/*/lib
 
-# Files created by npm. 
+# Files created by npm.
 package-lock.json
 /node_modules
 /packages/*/package-lock.json
 /packages/*/node_modules
+/packages/*/*.tgz
 
 # IDE / editor specific files.
 .idea/

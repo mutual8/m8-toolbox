@@ -1,8 +1,13 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  extends: ['airbnb-base', 'prettier', 'prettier/@typescript-eslint'],
   plugins: ['@typescript-eslint'],
+  extends: [
+    'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+  ],
   parserOptions: {
     project: './tsconfig.json',
     ecmaVersion: 2018,
@@ -11,6 +16,7 @@ module.exports = {
     browser: false,
     commonjs: true,
     es6: true,
+    jest: false,
   },
   settings: {
     'import/resolver': {
@@ -20,4 +26,17 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: [
+        '**/*.spec.js',
+        '**/*.test.js',
+        '**/*.spec.ts',
+        '**/*.test.ts',
+        '**/*.spec.tsx',
+        '**/*.test.tsx',
+      ],
+      env: { jest: true },
+    },
+  ],
 }
