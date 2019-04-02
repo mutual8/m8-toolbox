@@ -3,12 +3,26 @@
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "clean": "lerna clean",
+    "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
-    "update": "npm up && npm run clean && npm run bootstrap",
-    "postinstall": "npm run bootstrap"
+    "coverage": "lerna run coverage",
+    "pretest": "lerna bootstrap --ci && lerna run build",
+    "test": "jest --coverage --verbose",
+    "update": "npm up && npm run clean && npm run bootstrap"
   },
   "jest": {
-    "rootDir": "packages"
+    "rootDir": "/",
+    "testMatch": [
+      "**/packages/src/**/*.spec.ts"
+    ],
+    "collectCoverageFrom": [
+      "**/src/**/*.ts",
+      "!**/node_modules/**"
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "coverageReporters": [
+      "lcov"
+    ]
   },
   "lint-staged": {
     "*.js": [
