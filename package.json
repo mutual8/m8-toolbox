@@ -6,7 +6,7 @@
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
     "coverage": "lerna run coverage",
-    "pretest": "lerna bootstrap --ci && lerna run build",
+    "pretest": "lerna bootstrap --hoist && lerna run build",
     "test": "jest --coverage --verbose",
     "update": "npm up && npm run clean && npm run bootstrap"
   },
