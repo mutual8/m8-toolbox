@@ -2,13 +2,10 @@
   "private": true,
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "clean": "lerna clean",
     "build": "lerna run build",
-    "bootstrap": "lerna bootstrap",
-    "coverage": "lerna run coverage",
-    "pretest": "lerna bootstrap --hoist && lerna run build",
-    "test": "jest --coverage --verbose",
-    "update": "npm up && npm run clean && npm run bootstrap"
+    "bootstrap": "lerna bootstrap --hoist",
+    "pretest": "npm run bootstrap && npm run build",
+    "test": "jest --coverage --verbose"
   },
   "jest": {
     "rootDir": "/",
@@ -16,7 +13,7 @@
       "**/packages/src/**/*.spec.ts"
     ],
     "collectCoverageFrom": [
-      "**/src/**/*.ts",
+      "**/packages/src/**/*.ts",
       "!**/node_modules/**"
     ],
     "coverageDirectory": "<rootDir>/coverage",
@@ -28,7 +25,7 @@
     "*.js": [
       "prettier --write"
     ],
-    "*.jsx": [
+    "*.json": [
       "prettier --write"
     ],
     "*.ts": [
@@ -44,7 +41,14 @@
     }
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-typescript": "^7.3.3",
     "@types/jest": "^24.0.11",
+    "@types/node": "^11.12.1",
     "@typescript-eslint/eslint-plugin": "^1.5.0",
     "@typescript-eslint/parser": "^1.5.0",
     "eslint": "^5.16.0",
