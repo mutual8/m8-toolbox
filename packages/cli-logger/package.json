@@ -18,9 +18,10 @@
   },
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "../../node_modules/.bin/babel -d ./lib -x \".ts,.js\" --delete-dir-on-start ./src",
+    "build": "npm run build:lib && npm run build:typeDefs",
+    "build:lib": "../../node_modules/.bin/babel -d ./lib -x \".ts,.js\" --delete-dir-on-start ./src",
     "build:typeDefs": "../../node_modules/.bin/tsc --noEmit false --allowJs false --emitDeclarationOnly -d --declarationDir ./lib --isolatedModules false",
-    "prepublishOnly": "npm run build && npm run build:typeDefs",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
