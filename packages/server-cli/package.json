@@ -25,6 +25,6 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "mutual8/cli-logger": "^1.0.0"
+    "@mutual8/cli-logger": "^1.0.0"
   }
 }
