@@ -1,5 +1,6 @@
 {
   "name": "@mutual8/app-cli",
+  "description": "Provides commands to manage your Mutual 8 React app from the command line.",
   "version": "0.0.0",
   "homepage": "https://github.com/mutual8/toolbox/tree/master/packages/app-cli#readme",
   "license": "AGPL-3.0-or-later",
