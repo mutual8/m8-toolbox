@@ -37,6 +37,10 @@ module.exports = {
         '**/*.test.tsx',
       ],
       env: { jest: true },
+      rules: {
+        'import/no-extraneous-dependencies': ['off', { devDependencies: true }],
+      },
     },
   ],
+  rules: {},
 }
