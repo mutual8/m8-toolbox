@@ -42,5 +42,8 @@ module.exports = {
       },
     },
   ],
-  rules: {},
+  rules: {
+    'import/prefer-default-export': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+  },
 }

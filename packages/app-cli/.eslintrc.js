@@ -1,9 +1,3 @@
-const { rules = {}, ...config } = require('../../.eslintrc')
+const rootConfig = require('../../.eslintrc')
 
-module.exports = {
-  ...config,
-  rules: {
-    ...rules,
-    'no-console': 'off',
-  },
-}
+module.exports = rootConfig
