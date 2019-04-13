@@ -1,10 +1,11 @@
 {
   "name": "@mutual8/cli-logger",
   "description": "Provides an enhanced JavaScript console for the command line.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/mutual8/toolbox/tree/master/packages/cli-logger#readme",
   "license": "AGPL-3.0-or-later",
   "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "files": [
     "lib"
   ],
