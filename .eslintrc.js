@@ -21,8 +21,8 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        // Allow import and resolve for *.ts modules.
-        extensions: ['.js', '.ts'],
+        // Allow import and resolve for *.ts(x) modules.
+        extensions: ['.js', '.ts', '.js', '.jsx'],
       },
     },
   },
@@ -35,6 +35,8 @@ module.exports = {
         '**/*.test.ts',
         '**/*.spec.tsx',
         '**/*.test.tsx',
+        '**/__tests__/**/*.*',
+        '**/__mocks__/**/*.*',
       ],
       env: { jest: true },
       rules: {
