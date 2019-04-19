@@ -7,6 +7,5 @@ Scripts, configuration, boilerplate, and tooling for Mutual 8 projects.
 
 Browse the [./packages](https://github.com/mutual8/toolbox/tree/master/packages) folder for more information:
 
-- [@mutual8/app-cli](https://github.com/mutual8/toolbox/tree/master/packages/app-cli#readme)
 - [@mutual8/cli-logger](https://github.com/mutual8/toolbox/tree/master/packages/cli-logger#readme)
 - [@mutual8/server-cli](https://github.com/mutual8/toolbox/tree/master/packages/server-cli#readme)
