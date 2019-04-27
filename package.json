@@ -3,10 +3,10 @@
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "build": "lerna run build",
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "coverage": "jest --coverage",
-    "coverage:report": "npm run coverage -- --verbose --coverageReporters=text-lcov | coveralls",
-    "postinstall": "npm run bootstrap",
+    "coverage:report": "jest --coverage --verbose --coverageReporters=text-lcov | coveralls",
+    "postinstall": "lerna bootstrap",
     "test": "jest",
     "watch": "jest --watch"
   },
@@ -29,6 +29,9 @@
       "pre-commit": "lint-staged"
     }
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",

@@ -6,12 +6,13 @@
 /packages/*/dist
 /packages/*/lib
 
-# Files created by npm.
+# Files created by npm or yarn.
 package-lock.json
 /node_modules
 /packages/*/package-lock.json
 /packages/*/node_modules
 /packages/*/*.tgz
+/packages/*/yarn.lock
 
 # IDE / editor specific files.
 .idea/
