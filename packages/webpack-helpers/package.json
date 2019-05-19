@@ -1,0 +1,37 @@
+{
+  "name": "@mutual8/webpack-helpers",
+  "description": "Provides webpack helpers for Mutual 8 apps.",
+  "version": "0.0.4",
+  "homepage": "https://github.com/mutual8/toolbox/tree/master/packages/webpack-helpers",
+  "license": "AGPL-3.0-or-later",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mutual8/toolbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mutual8/toolbox/issues"
+  },
+  "scripts": {
+    "build": "yarn build:lib && yarn build:typeDefs",
+    "build:lib": "babel -d ./lib -x \".ts,.js\" --ignore \"**/*.spec.ts\" --delete-dir-on-start ./src",
+    "build:typeDefs": "tsc --noEmit false --allowJs false --emitDeclarationOnly -d --declarationDir ./lib --isolatedModules false",
+    "prepublishOnly": "yarn build",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "peerDependencies": {
+    "webpack": "^4.31.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.31.0"
+  },
+  "dependencies": {
+    "@types/webpack": "^4.4.29"
+  }
+}
