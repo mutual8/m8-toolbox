@@ -1,0 +1,62 @@
+{
+  "name": "@mutual8/webpack-config-factory",
+  "description": "Provides helpers for creating webpack configuration for Mutual 8 app.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mutual8/toolbox/tree/master/packages/webpack-config-factory#readme",
+  "license": "AGPL-3.0-or-later",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mutual8/toolbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mutual8/toolbox/issues"
+  },
+  "scripts": {
+    "build": "yarn build:lib && yarn build:typeDefs",
+    "build:lib": "babel -d ./lib -x \".ts,.js\" --ignore \"**/*.spec.ts\" --delete-dir-on-start ./src",
+    "build:typeDefs": "tsc --noEmit false --allowJs false --emitDeclarationOnly -d --declarationDir ./lib --isolatedModules false",
+    "prepublishOnly": "yarn build",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "peerDependencies": {
+    "webpack": "^4.31.0"
+  },
+  "devDependencies": {
+    "@types/webpack-manifest-plugin": "^2.0.0",
+    "@types/webpackbar": "^2.6.0",
+    "start-server-webpack-plugin": "^2.2.5",
+    "webpack": "^4.31.0"
+  },
+  "dependencies": {
+    "@babel/code-frame": "^7.0.0",
+    "@mutual8/cli-logger": "^1.0.2",
+    "@types/babel__code-frame": "^7.0.1",
+    "@types/mini-css-extract-plugin": "^0.2.0",
+    "@types/react-dev-utils": "^9.0.1",
+    "@types/sockjs-client": "^1.1.1",
+    "@types/webpack": "^4.4.29",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "jest-message-util": "^24.8.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "react-dev-utils": "^9.0.1",
+    "react-error-overlay": "^5.1.6",
+    "sockjs-client": "^1.3.0",
+    "strip-ansi": "^5.2.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpackbar": "^3.2.0"
+  }
+}
