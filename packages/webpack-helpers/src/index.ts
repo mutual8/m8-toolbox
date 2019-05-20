@@ -11,3 +11,4 @@ export type WebpackPluginOptions<T> = PluginOptions<T>
 
 export { createConditionalWebpackPlugin } from './conditional-plugin-factory'
 export { HotModuleReplacementPlugin } from './plugins/hot-module-replacement'
+export { AggressiveMergingPlugin } from './plugins/aggressive-merging'
