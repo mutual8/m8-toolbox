@@ -1,0 +1,31 @@
+{
+  "name": "@mutual8/webpack-plugin-aggressive-merging",
+  "description": "Provides a pre-configured aggressive chunk merging webpack plugin for Mutual 8 apps.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mutual8/toolbox/tree/master/packages/webpack-plugin-aggressive-merging",
+  "license": "AGPL-3.0-or-later",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mutual8/toolbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mutual8/toolbox/issues"
+  },
+  "scripts": {
+    "build": "yarn build:lib && yarn build:typeDefs",
+    "build:lib": "babel -d ./lib -x \".ts,.js\" --ignore \"**/*.spec.ts\" --delete-dir-on-start ./src",
+    "build:typeDefs": "tsc --noEmit false --allowJs false --emitDeclarationOnly -d --declarationDir ./lib --isolatedModules false",
+    "prepublishOnly": "yarn build",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@mutual8/webpack-helpers": "^0.0.5"
+  }
+}
