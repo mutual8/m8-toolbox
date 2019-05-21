@@ -26,6 +26,6 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@mutual8/webpack-helpers": "^0.0.5"
+    "@mutual8/webpack-helpers": "^0.0.6"
   }
 }

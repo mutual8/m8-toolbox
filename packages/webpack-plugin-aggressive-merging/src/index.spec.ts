@@ -11,6 +11,7 @@ const OPTIONS: any = { pluginOptions: 'pluginOptions' }
 const COMPILER: any = { compiler: 'compilerOptions' }
 
 test('when created but NOT applied, does NOT create AggressiveMergingPlugin instance', () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const pluginFn = new Plugin(OPTIONS)
 
   expect(AggressiveMergingPlugin).not.toHaveBeenCalled()

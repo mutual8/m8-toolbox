@@ -11,6 +11,7 @@ const OPTIONS: any = { pluginOptions: 'pluginOptions' }
 const COMPILER: any = { compiler: 'compilerOptions' }
 
 test('when created but NOT applied, does NOT create HotModuleReplacementPlugin instance', () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const pluginFn = new Plugin(OPTIONS)
 
   expect(HotModuleReplacementPlugin).not.toHaveBeenCalled()
