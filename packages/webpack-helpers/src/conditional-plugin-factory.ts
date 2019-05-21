@@ -14,10 +14,15 @@ export function createConditionalWebpackPlugin<T = {}>(
     private options: PluginOptions<T>
 
     public constructor(options: PluginOptions<T>) {
+      this.apply.bind(this)
       this.options = options
     }
 
     public apply(compiler: WebpackCompiler): void {
+      if (!this.options || typeof pluginFunction !== 'function') {
+        return
+      }
+
       if (this.options.enablePlugin) {
         pluginFunction(compiler, this.options)
       }
