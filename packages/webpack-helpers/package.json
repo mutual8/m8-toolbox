@@ -1,7 +1,7 @@
 {
   "name": "@mutual8/webpack-helpers",
   "description": "Provides webpack helpers for Mutual 8 apps.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://github.com/mutual8/toolbox/tree/master/packages/webpack-helpers",
   "license": "AGPL-3.0-or-later",
   "main": "lib/index.js",
@@ -32,6 +32,7 @@
     "webpack": "^4.31.0"
   },
   "dependencies": {
-    "@types/webpack": "^4.4.29"
+    "@types/webpack": "^4.4.29",
+    "mini-css-extract-plugin": "^0.6.0"
   }
 }
