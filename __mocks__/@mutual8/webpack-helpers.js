@@ -1,10 +1,14 @@
 export const $mockedAggressiveMergingPluginApply = jest.fn()
+export const $mockedHotModuleReplacementPluginApply = jest.fn()
+export const $mockedMiniCssExtractPluginApply = jest.fn()
 
 export const AggressiveMergingPlugin = jest.fn().mockImplementation(() => ({
   apply: $mockedAggressiveMergingPluginApply,
 }))
 
-export const $mockedMiniCssExtractPluginApply = jest.fn()
+export const HotModuleReplacementPlugin = jest.fn().mockImplementation(() => ({
+  apply: $mockedHotModuleReplacementPluginApply,
+}))
 
 export const MiniCssExtractPlugin = jest.fn().mockImplementation(() => ({
   apply: $mockedMiniCssExtractPluginApply,

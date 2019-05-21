@@ -6,7 +6,8 @@ import {
 
 export default createConditionalWebpackPlugin<{
   target?: WebpackConfiguration['target']
-}>((compiler, { target = compiler.options.target }) => {
+}>((compiler, options) => {
+  const target = options.target || (compiler.options && compiler.options.target)
   const pluginOptions = target === 'web' ? { multiStep: true } : undefined
 
   const plugin = new HotModuleReplacementPlugin(pluginOptions)
