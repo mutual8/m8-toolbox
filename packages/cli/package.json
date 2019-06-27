@@ -1,0 +1,35 @@
+{
+  "name": "@mutual8/cli",
+  "description": "Provides CLI commands for Mutual 8 apps.",
+  "version": "1.0.2",
+  "homepage": "https://github.com/mutual8/toolbox/tree/master/packages/cli#readme",
+  "license": "AGPL-3.0-or-later",
+  "bin": {
+    "mutual8": "bin/mutual8"
+  },
+  "files": [
+    "bin/mutual8",
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mutual8/toolbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mutual8/toolbox/issues"
+  },
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "yarn build:lib && yarn build:typeDefs",
+    "build:lib": "babel -d ./lib -x \".ts,.js\" --ignore \"**/*.spec.ts\" --delete-dir-on-start ./src",
+    "build:typeDefs": "tsc --noEmit false --allowJs false --emitDeclarationOnly -d --declarationDir ./lib --isolatedModules false",
+    "prepublishOnly": "yarn build",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "webpack": "^4.35.0"
+  }
+}
